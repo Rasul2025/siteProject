@@ -1,0 +1,141 @@
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #FFF;
+    font-family: Neue Machina;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #0D0D0D; 
+}
+
+
+.container {
+    max-width: 1620px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+/******************** HEADER **********************/
+
+.header {
+    height: 90px;
+    margin-bottom: 50px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header__burger-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: background-color .3s, opacity .3s, transform .3s;
+    z-index: 2;
+    padding: 0;
+    display: block;
+    
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-15px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(15px);
+}
+
+/************ Крестик **********/
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #0D0D0D;
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #0D0D0D;
+}
+
+.menu {
+    position: absolute;
+    left: -900px;
+    top: 0;
+    width: 900px;
+    background-color: #99E835;
+    height: 1080px;
+    padding-top: 140px;
+    padding-left: 160px;
+    transition: transform .5s, visibility .5s;
+}
+
+.menu__item-link {
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.menu__item {
+    margin-bottom: 75px;
+}
+
+.menu__item-link {
+    color: #0D0D0D;
+    display: block;
+}
+
+.header.open .menu {
+    transform: translateX(100%);
+}
+
+.header__wrapper-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 100px;
+}
+
+.header__info-link {
+    cursor: pointer;
+}
+
+.header__info-link:hover {
+    color: #99E835;
+}

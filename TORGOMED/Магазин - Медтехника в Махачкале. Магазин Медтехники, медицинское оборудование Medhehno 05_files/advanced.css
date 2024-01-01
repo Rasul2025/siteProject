@@ -1,0 +1,232 @@
+:root{
+	--blue: #00b3f6;
+	--grey: #a1a1a1;
+	--red: #f60017;
+}
+
+/* Общие стили внутренних страниц */
+.m_insideContent{margin-bottom: 30px;}
+	.m_insideTitle{width: 100%; margin-bottom: 30px; padding: 12px 0px 20px 0px; text-align: center; background: url('../images/m_titleLine.png') no-repeat center bottom;}
+		.m_insideTitle p{font-family: "PF_bold"; font-size: 30px; color: #000; text-transform: uppercase; line-height: 35px;}
+
+
+/* Стили page.php */
+.m_pageContent{}
+	.woocommerce{}
+		.woocommerce-result-count{display: none !important;}
+		.woocommerce-ordering{display: none !important;}
+	.pageDesc{}
+		.pageDesc p{margin-bottom: 20px; line-height: 22px;}
+		.pageDesc a{margin-bottom: 20px; text-decoration: underline; color: #494683;}
+		.pageDesc iframe{width: 640px; height: 480px; display: block; margin: 0px auto; margin-bottom: 20px;}
+		.pageDesc h1, h2, h3, h4, h5, h6{margin-bottom: 20px;}
+		.pageDesc ol{list-style: decimal; list-style-position: inside; margin-bottom: 20px;}						
+		.pageDesc ul{list-style: disc; list-style-position: inside; margin-bottom: 20px;}
+		.pageDesc img{width: auto; height: auto; max-width: 100%;}
+		.pageDesc .alignleft{float: left; margin-right: 25px;}
+		.pageDesc .alignright{float: right; margin-left: 25px;}
+		.pageDesc .aligncenter{display: block; margin: 0px auto; margin-bottom: 20px;}
+		.pageDesc table{margin-bottom: 20px; border: 1px;}
+			.pageDesc table tr{border: 1px solid #000;}
+				.pageDesc table td{border: 1px solid #000; padding: 5px;}	
+
+
+/* Стили полей формы покупки в один клик */
+.modal .formField{width: 263px; margin: 0px auto; margin-bottom: 20px;}
+.modal .sendForm{margin-bottom: 0px;}
+	.modal .formField input{display: block; width: 100%; height: 48px; padding: 0px 10px; box-sizing: border-box; text-align: center; border-radius: 5px; border: 1px solid var(--grey); transition: 0.2s;}
+		.modal .formField input:focus{border-color: var(--blue);}
+	.modal .sendOneClick{border: none !important; background: var(--blue); color: #fff; cursor: pointer;}
+		.modal .sendOneClick:hover{background-color: var(--red);}
+.modal .hiddenField{display: none;}
+
+
+/* Общие стили уведомления отправки формы */
+.wpcf7-response-output{border: none !important; margin: 0px !important; padding: 0px !important; font-size: 16px;}
+.wpcf7-validation-errors{color: var(--red);}
+.wpcf7-mail-sent-ok{color: green;}
+.formField input.wpcf7-not-valid{border-color: var(--red);}
+
+
+/* Стили модального окна добавления товара в корзину */
+.xoo-cp-container{width: 400px !important; padding: 0px !important; padding-bottom: 30px !important; box-shadow: none !important;}
+	.xoo-cp-icon-cross{width: 20px !important; height: 20px !important; right: -20px !important; top: -20px !important; background: url('../images/closeModal.png') no-repeat center center/contain !important;}
+		.xoo-cp-icon-cross::before{display: none;}
+	.xoo-cp-success{height: 54px !important; padding: 0px !important; margin: 0px !important; text-align: center !important; color: #000 !important; background: none !important; text-transform: uppercase !important; border: none !important; font-family: "PF_medium"; font-size: 18px; line-height: 54px;}	
+		.xoo-cp-icon-check{display: none !important;}
+	.xoo-cp-pdetails{overflow: unset !important;}
+		.xoo-cp-pdetails tbody{display: block; width: 100%;}
+			.xoo-cp-pdetails tr{display: block; width: 100%;}
+				.xoo-cp-pdetails td{display: block !important; width: 100% !important; margin: 0px auto !important}
+				.xoo-cp-remove{display: none !important;}
+				.xoo-cp-pimg{height: 218px;}
+					.xoo-cp-pimg a{display: flex; width: 100%; height: 100%;}
+						.xoo-cp-pimg img{display: block; margin: auto; width: auto !important; max-width: 360px !important; height: auto !important; max-height: 218px !important;}
+				.xoo-cp-pdetails .xoo-cp-ptitle{display: flex !important; width: 100%; height: 51px; padding: 0px !important; text-align: center !important;}
+					.xoo-cp-ptitle a{display: table; margin: auto; color: #000; font-size: 16px; font-family: "PF_medium";}
+				.xoo-cp-pdetails .xoo-cp-pprice{display: none !important;}
+				.xoo-cp-pdetails .xoo-cp-pqty{display: none !important;}
+	.xoo-cp-ptotal{display: none !important;}
+	.xoo-cp-btns{width: 100%; height: 38px;}
+		.xoo-cp-btns a{width: 167px !important; height: 38px !important; padding: 0px !important; margin: 0px 15px !important; border: none !important; background: var(--blue) !important; transition: 0.2s !important;}
+			.xoo-cp-btns a{line-height: 38px; text-transform: unset !important; font-size: 16px !important;}
+
+
+/* Стили фиксированной шапки */
+.fixedHeader{display: none; position: fixed; width: 100%; height: 52px; z-index: 5; background: #f5f5f5; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);}
+	.fixedHeader .h_menu{display: table; width: auto; height: 100%; float: left;}
+		.fixedHeader .h_menuHome{height: 100%;}
+		.fixedHeader .h_menuList{height: 100%;}
+			.fixedHeader .h_menuList > li{height: 100%;}
+				.fixedHeader .h_menuList > li > a{height: 100%; line-height: 48px;}
+	.fixedHeader .h_info{display: table; width: auto; height: 100%; float: right;}
+		.fixedHeader .h_number{display: block; height: 100%; float: left; margin: 0px; margin-right: 20px; line-height: 52px;}
+		.fixedHeader .aws-container{width: 328px !important; height: 30px !important; float: left !important; margin: 11px 0px 0px 0px !important;}
+		.aws-container{width: 100%; height: 30px; margin: auto 0px;}						
+
+
+/* Стили страницы корзины */
+.cart{}
+	.cart thead{}
+		.cart tr{}
+			.cart th{background: var(--blue); color: #fff; text-transform: uppercase; text-align: center; font-family: "PF_bold";}
+	.cart tbody{}
+		.cart tr{}
+			.cart td{color: #000; font-family: "PF_bold"; text-align: center;}
+				.cart td span{color: #000; font-family: "PF_bold";}		
+				.cart td a{color: #000; font-family: "PF_bold";}
+				.cart .product-name{max-width: 200px !important;}
+					.cart .product-name a{font-size: 20px;}
+				.cart .product-thumbnail img{max-width: 150px; max-height: 150px;}	
+				.woocommerce td.product-quantity{min-width: 125px !important;}
+				.cart .quantity{}
+					.cart .minus{width: 33px; height: 33px; border: none; cursor: pointer; color: #fff; background: var(--blue);}
+					.cart .plus{width: 33px; height: 33px; border: none; cursor: pointer; color: #fff; background: var(--blue);}
+					.cart .qty{width: 45px; height: 33px; border: 1px solid var(--blue);}
+				.woocommerce a.remove.prodRemove{width: 30px; height: 30px; margin: auto; background: var(--red) !important; color: #fff !important; border-radius: 50%;}			
+				.cart .coupon{display: table !important; margin: auto !important; float: none !important;}
+					.cart .coupon label{display: unset !important; margin-right: 10px; font-size: 21px; font-family: "PF_medium";}
+					.cart .coupon .input-text{width: 160px !important; height: 40px; padding: 0px 10px; margin-right: 20px; box-sizing: border-box; border: 1px solid var(--blue);}
+					.cart .coupon .button{display: block !important; float: right !important; width: 160px !important; height: 40px !important; color: #fff !important; font-family: "PF_medium"; font-size: 16px !important; border-radius: unset !important; background: var(--blue) !important;}
+.cart_continue_shopping{display: block; width: 356px; height: 57px; float: left; text-align: center; border-radius: 5px; border: 1px solid var(--blue);}
+	.cart_continue_shopping{font-size: 21px; color: #000; text-transform: uppercase; line-height: 57px;}
+.return-to-shop a{width: 356px; height: 57px; padding: 0px !important; text-align: center; border-radius: 5px !important; border: 1px solid var(--blue) !important; background: #fff !important;}
+	.return-to-shop a{font-size: 21px !important; color: #000 !important; text-transform: uppercase !important; line-height: 57px !important;}
+.cart_totals{width: auto !important;}
+	.cart_totals table{width: auto !important; border: none !important;}
+		th{padding: 15px 0px !important; padding-right: 20px !important;}
+		th:last-of-type{padding-right: 0px !important;}
+		.cart-total{font-size: 24px; color: #000;}
+			.cart-total > span{text-transform: uppercase;}
+		.cart-order{}
+			.wc-proceed-to-checkout a{width: 357px; height: 57px; text-align: center !important; padding: 0px !important; background: var(--blue) !important;}
+				.wc-proceed-to-checkout a{font-size: 21px !important; color: #fff !important; line-height: 57px !important; text-transform: uppercase !important;}	
+
+
+/* Стили страницы оформления заказа */
+.woocommerce-form-coupon-toggle{display: none !important;}
+.checkout{}
+	.checkout .col2-set{margin-bottom: 20px;}
+		.checkout .col-2{display: none;}
+		.checkout .col-1{width: 945px !important;}
+			.checkout h3{display: none !important;}
+			.checkout .form-row{width: 458px !important; margin: 0px 0px 10px 0px !important; padding: 0px !important; float: left; clear: none !important;}
+				.checkout .input-text{display: block; height: 64px; padding: 0px 10px; box-sizing: border-box; font-size: 18px; border: 1px solid #c0c0c0; border-radius: 5px;}
+			.checkout .order-name{margin-right: 29px !important;}
+			.checkout .order-street{margin-right: 30px !important;}
+			.checkout .order-house{width: 218px !important; margin-right: 21px !important;}
+			.checkout .order-apartment{width: 218px !important;}
+			.checkout .order-hidden{display: none !important;}
+.checkout .woocommerce-checkout-review-order-table{display: none !important;}
+.checkout .wc_payment_methods{display: none !important;}
+.checkout .button{width: 360px; height: 64px; float: none !important; border-radius: 5px !important; border: none !important; background: var(--blue) !important; font-size: 21px !important; color: #fff !important; text-transform: uppercase !important;}			
+
+.woocommerce-order-overview__email{display: none !important;}
+.woocommerce-customer-details--email{display: none !important;}
+
+/* Стили single.php */
+.m_singleContent{}
+	.m_singleInfo{width: 100%; height: auto; padding-top: 38px; margin-bottom: 37px; overflow: hidden;}
+		.m_singleSlider{width: 555px; height: 350px; float: left;}
+			.m_singleSlider .slider-pro{padding-left: 142px !important; box-sizing: border-box;}
+				.m_singleSlider .sp-slides-container{width: 413px !important; height: 100%; border: 1px solid #c7c7c7; box-sizing: border-box;}
+					.m_singleSlider .sp-mask{width: 100% !important; height: 100% !important;}
+						.m_singleSlider .sp-slides{height: 100% !important;}
+							.m_singleSlider .sp-slide{width: 100% !important; height: 100% !important;}
+								.m_singleSlider .sp-image-container{height: 100% !important;}
+									.m_singleSlider .sp-image-link{display: flex !important; width: 100%; height: 100%;}
+										.m_singleSlider .sp-image{display: block !important; width: auto !important; height: auto !important; max-width: 80% !important; max-height: 80% !important; margin: auto !important;}
+				.m_singleSlider .sp-thumbnail-container{display: flex; border: 1px solid #c7c7c7; box-sizing: border-box;}
+					.m_singleSlider .sp-thumbnail{display: block !important; width: auto !important; height: auto !important; max-width: 80% !important; max-height: 80% !important;}
+				.m_singleSlider .sp-selected-thumbnail{border-color: var(--blue);}
+		.m_singleRight{width: 555px; float: right;}
+			.m_singleTitle{width: 100%; margin-bottom: 14px;}
+				.m_singleTitle p{font-family: "PF_bold"; font-size: 24px; color: #000; text-transform: uppercase; line-height: 28px;}
+			.m_singleProducer{width: 100%; margin-bottom: 20px;}
+				.m_singleProducer p{font-size: 14px; color: #a6a6a6; line-height: 10px;}
+			.m_singleMainPoints{width: 100%; margin-bottom: 20px;}
+				.m_singleMainPoints p:last-of-type{margin-bottom: 0px;}
+				.m_singleMainPoints p{font-size: 16px; color: #000; line-height: 11px; margin-bottom: 19px;}
+				.m_singleMainPoints p::before{content: "•"; color: var(--blue); padding-right: 8px;}
+			.m_singlePriceAmount{width: 100%; height: 63px; margin-bottom: 28px;}
+				.m_singlePriceInfo{float: left; margin-right: 30px;}
+					.m_singlePriceInfo p{font-family: "PF_medium"; font-size: 24px; color: #000;}
+					.m_singlePriceText{line-height: 17px; margin-bottom: 13px;}
+					.m_singlePrice{line-height: 33px;}
+				.m_singleAmount{width: 131px; height: 33px; float: left; padding-top: 30px;}
+					.m_singleAmountButton{width: 33px; height: 33px; float: left; text-align: center; cursor: pointer; background-color: var(--blue);}							
+						.m_singleAmountButton{color: #fff; line-height: 32px; font-size: 32px; font-family: 'Open Sans', sans-serif;}
+						.m_singleMinusAmount{margin-right: 10px; line-height: 28px;}
+						.m_singleAmountField{display: block; cursor: default; width: 45px; height: 33px; float: left; margin-right: 10px; text-align: center; border: 1px solid var(--blue);}
+			.m_singleBuy{width: 100%; height: 47px;}
+				.m_singleAddToCart{width: 262.5px; height: 100%; float: left; margin-right: 30px;}
+					.singleToCartButton{width: 100%; height: 100%;}
+						.singleToCartButton a{width: 100% !important; height: 100%; padding: 0px !important; text-align: center; transition: 0.2s; border-radius: 5px !important; background: var(--blue) !important;}
+							.singleToCartButton a{font-size: 21px !important; color: #fff !important; line-height: 45px !important;}
+							.singleToCartButton a:hover{background: var(--red) !important;}
+							.singleToCartButton a::after{top: 0px !important;}	
+				.m_singleOneClickBuy{width: 262.5px; height: 100%; float: left;}
+					.m_singleOneClickBuy > span{display: block; width: 100%; height: 100%; cursor: pointer; text-align: center; border-radius: 5px; border: 1px solid var(--blue); box-sizing: border-box; transition: 0.2s;}				
+						.m_singleOneClickBuy > span{font-size: 21px; color: #000; line-height: 45px;}
+						.m_singleOneClickBuy > span:hover{border-color: var(--red);}
+	.m_singleTabs{display: table; width: auto; overflow: hidden;}
+		.m_singleTab{float: left;}
+			.m_singleTabTitle{height: 40px; padding: 0px 15px; cursor: pointer; background: #efefef;}
+				.m_singleTabTitle{font-family: "PF_medium"; font-size: 21px; color: #000; line-height: 38px;}
+			.selectedTab > p{background: #fff; border-top: 2px solid var(--blue);}
+			.m_singleTabContent{display: none;}
+			.m_singleDescTab{}
+				.m_singleDescTab p{margin-bottom: 20px; line-height: 22px;}
+				.m_singleDescTab a{margin-bottom: 20px; text-decoration: underline; color: #494683;}
+				.m_singleDescTab iframe{width: 640px; height: 480px; display: block; margin: 0px auto; margin-bottom: 20px;}
+				.m_singleDescTab h1, h2, h3, h4, h5, h6{margin-bottom: 20px;}
+				.m_singleDescTab ol{list-style: decimal; list-style-position: inside; margin-bottom: 20px;}						
+				.m_singleDescTab ul{list-style: disc; list-style-position: inside; margin-bottom: 20px;}
+				.m_singleDescTab img{width: auto; height: auto; max-width: 100%;}
+				.m_singleDescTab .alignleft{float: left; margin-right: 10px;}
+				.m_singleDescTab .alignright{float: right; margin-left: 10px;}
+				.m_singleDescTab .aligncenter{display: block; margin: 0px auto; margin-bottom: 20px;}
+				.m_singleDescTab table{margin-bottom: 20px; border: 1px;}
+					.m_singleDescTab table tr{border: 1px solid #000;}
+						.m_singleDescTab table td{border: 1px solid #000; padding: 5px;}
+			.m_singleReqTab{}
+				.m_singleReqParent{width: 100%; overflow: hidden;}
+					.m_singleReqParent > td{width: 50%; padding: 5px 10px;}
+					.m_singleReqVal{text-align: right;}
+					.m_singleReqParent:nth-of-type(2n) .m_singleReqName{background: #f7f7f7;}	
+					.m_singleReqParent:nth-of-type(2n) .m_singleReqVal{background: #eaeaea;}
+			.m_singleEqTab{}
+				.m_singleEqPoint{font-size: 18px; margin-bottom: 5px;}
+					.m_singleEqPoint::before{content: "•"; color: var(--blue); padding-right: 8px;}
+			.m_singleTrTab{}
+				.m_singleTrPoint{font-size: 18px; margin-bottom: 5px;}
+					.m_singleTrPoint::before{content: "•"; color: var(--blue); padding-right: 8px;}
+			.m_singleDocsTab{overflow: hidden;}
+				.m_singleDoc{display: block; width: 180px; height: 200px; margin-right: 5px; padding: 5px; box-sizing: border-box; border: 1px solid #eaeaea;}
+				.m_singleDoc:nth-of-type(5n){margin-right: 0px;}
+					.m_singleDocImg{display: flex; width: 100%; height: 150px; margin-bottom: 5px;}
+						.m_singleDocImg img{width: auto; height: auto; max-width: 100%; max-height: 100%; margin: auto;}
+					.m_singleDocTitle{text-align: center; font-size: 15px; color: var(--blue); font-family: "PF_medium";}	
+	.m_singleTabsContent{width: 920px; padding-top: 35px; box-sizing: border-box; overflow: hidden;}							
+
+

@@ -1,0 +1,198 @@
+@media screen and (max-width: 1190px){
+	wrapper{min-width: 980px;}		
+		header{}
+			.h_content{width: 960px; padding: 0px 10px;}
+				.h_logo{width: 265px;}
+				.h_search{width: 390px;}
+				.h_menuSubMenu{width: 675px;}
+				.fixedHeader .aws-container{width: 200px !important;}
+		main{}
+			.m_content{width: 960px; padding: 0px 10px;}
+			.m_slider{}
+				.m_slider .sp-slide-container{width: 960px; padding: 0px 10px;}
+			.m_bestsellersList{}
+				.m_bestsellersCarousel .item{width: 310px;}
+				.productBlock{width: 310px; margin: 0px 15px 15px 0px;}
+					.productBlockLeft{width: 55%;}
+					.productBlockRight{width: 45%;}
+						.productBlockToCart{width: 130px;}
+			.m_partnersSlider{}
+				.m_partnersSlider .owl-carousel{width: 840px !important;}
+			.m_categoriesList{}
+				.catBlock{width: 232px; margin: 0px 10px 10px 0px;}
+		footer{}
+			.f_content{width: 960px; padding: 0px 10px;}
+				.f_cartInfo{}
+					.f_cartInfoLeft{width: 700px;}
+					.f_cartInfoRight{width: 260px;}
+				.fixedCart{width: 960px;}
+				
+		/* Стили для single.php */
+		.m_singleSlider{width: 55%;}
+			.m_singleSlider .slider-pro{max-width: unset !important;}
+				.m_singleSlider .sp-slides-container{width: 360px !important;}
+					.m_singleSlider .sp-image-container{width: 100% !important;}
+		.m_singleRight{width: 45%;}
+			.m_singleBuy{}
+				.m_singleBuy > div{width: 45%;}
+		.m_singleTabs{width: 100%; text-align: center;}
+			.m_singleTab{float: none;}		
+		.m_singleTabsContent{width: 100%;}		
+
+		/* Стили страницы корзины */
+		.cart_continue_shopping{width: 280px;}
+		.wc-proceed-to-checkout a{width: 240px;}												
+}
+
+@media screen and (max-width: 1000px){
+	wrapper{min-width: 640px;}
+	.fixedHeader{display: none !important;}
+		header{height: auto; margin-bottom: 10px; border-bottom: 2px solid var(--blue);}
+			.h_content{width: 620px;}
+				.h_top{height: 230px;}
+					.h_logo{width: 100%; float: none; margin-right: 0px;}
+						.h_logoLink{margin: 0px auto;}
+					.h_search{float: none; width: 400px; height: 45px; margin: 0px auto; margin-bottom: 15px;}	
+						.aws-container{height: 100%;}
+					.h_info{width: 100%; height: 40px; text-align: center;}
+						.h_infoContent{display: block; width: 100%; height: 100%; padding: 0px 20px; box-sizing: border-box;}
+							.h_number{display: inline-block; line-height: 40px; margin: 0px 10px;}
+							.h_adress{display: inline-block; font-size: 18px; line-height: 40px; margin: 0px 10px;}
+				.h_menu{}
+					.h_menuHome{display: none;}
+					.h_menuList{display: table; float: none; margin: 0px auto;}
+						.h_menuSub{display: none !important;}
+		main{}
+			.m_content{width: 620px;}
+			.m_slider{display: none !important;}
+			.m_bestsellersList{}
+				.m_bestsellersCarousel .owl-stage-outer{padding-left: 130px;}
+				.m_bestsellersCarousel .item{width: 360px;}
+				.productBlock{width: 360px; float: none; margin: 0px auto !important; margin-bottom: 20px !important;}
+					.productBlockToCart{width: 150px;}
+			.m_partnersSlider{}
+				.m_partnersSlider .owl-carousel{width: 500px !important;}
+			.m_categoriesList{}
+				.catBlock{width: 300px; margin: 0px 20px 20px 0px !important;}
+				.catBlock:nth-of-type(2n){margin-right: 0px !important;}
+		footer{height: auto;}
+			.f_content{width: 620px;}
+				.f_cartInfoContent{height: 120px;}					
+					.f_cartInfo{height: 100%;}
+						.f_cartInfoLeft{width: 100%; height: 55px; float: none; margin-bottom: 10px; border: 3px solid #a1a1a1; border-radius: 37px;}
+							.f_cartInfoText{font-size: 18px;}
+						.f_cartInfoRight{height: 55px; float: none; margin: 0px auto; border-radius: 37px;}
+					.fixedCart{height: 55px; width: 620px;}
+						.fixedCart .f_cartInfoRight{display: none !important;}
+				.f_recall{height: auto;}
+					.f_recallContent{height: unset;}
+						.f_recallText{padding-top: 15px;}
+						.f_recallForm{width: 100%; height: auto;}
+							.f_recallForm .formField{float: none; width: 400px; margin: 0px auto !important; margin-bottom: 15px !important;}
+								.f_recallForm .formField input{height: 45px;}
+				.f_counters{display: none !important;}
+
+		/* Стили страницы корзины */
+		.cart_continue_shopping{display: none;}
+		.cart-total{display: unset !important;}						
+		.cart-order{display: unset !important;}
+
+		/* Стили страницы оформления заказа */
+		.checkout .col-1{width: 458px !important; margin: 0px auto;}
+			.checkout .form-row.place-order{float: none !important; margin: 0px auto !important}
+
+		/* Стили для page.php */
+		.pageDesc{}
+			.pageDesc img{width: auto; height: auto; max-width: 100%;}
+			.pageDesc .alignleft{float: none; margin: 0px auto; margin-bottom: 20px;}
+			.pageDesc .alignright{float: none; margin: 0px auto; margin-bottom: 20px;}
+			.pageDesc .aligncenter{display: block; margin: 0px auto; margin-bottom: 20px;}
+
+		/* Стили для single.php */
+		.m_singleSlider{width: 100%; float: none; margin-bottom: 20px;}
+			.m_singleSlider .sp-slides-container{width: 478px !important;}
+		.m_singleRight{width: 100%; float: none; margin-bottom: 20px;}	
+}
+
+@media screen and (max-width: 640px){
+	wrapper{min-width: 340px;}
+		header{}
+			.h_content{width: 320px;}
+				.h_search{width: 100%; height: 40px; position: relative;}
+					.h_mobMenuButton{display: block; width: 40px; height: 40px; background: url('../images/mobileMenuButton.png') no-repeat center center/contain;}
+					.aws-container{width: 270px; float: right; margin-left: 10px;}
+				.h_info{height: auto;}
+					.h_infoContent{padding: 0px 10px;}
+						.h_number{display: block; width: 100%; margin: 0px; margin-bottom: 5px; line-height: unset;}
+						.h_adress{display: block; width: 100%; margin: 0px; line-height: unset;}
+				.h_bottom{height: 0px;}
+					.h_menu{position: fixed; width: 100%; height: 100%; top: 0px; left: -100%; z-index: 999999; background: #fff;}
+					.showMobMenu{animation: showMobMenu 0.5s 1 forwards ease-in-out;}	
+					.hideMobMenu{animation: hideMobMenu 0.5s 1 forwards ease-in-out;}	
+						.h_menuContainer{display: flex; position: relative; width: 100%; height: 100%; max-height: 100%; overflow-x: auto;}
+							.h_closeMobMenu{display: block; width: 35px; height: 35px; position: absolute; top: 10px; right: 10px; background: url('../images/closeMobMenu.png') no-repeat center center/contain;}
+							.h_menuList{width: 100%; margin: auto 0px;}
+								.h_menuList li:last-of-type{margin-bottom: 0px;}
+								.h_menuList li{width: 100%; height: auto; position: relative; margin: 0px; margin-bottom: 7px; float: none; text-align: center;}
+									.h_menuList li hr{display: none !important;}
+									.h_menuList li a{text-transform: uppercase; height: unset; line-height: unset; padding: 3px 0px;}
+					@keyframes showMobMenu{
+						from{left: -100%;}
+						to{left: 0%;}
+					}
+					@keyframes hideMobMenu{
+						from{left: 0%;}
+						to{left: -100%;}
+					}
+		main{}
+			.m_content{width: 320px;}
+				.m_bestsellers{}
+					.m_bestsellersList .owl-navs-container{z-index: 2;}
+					.m_bestsellersCarousel .owl-stage-outer{padding-left: 5px;}
+					.m_bestsellersCarousel .item{width: 310px;}
+						.m_bestsellersCarousel .item .productBlock{width: 310px;}
+						.m_bestsellersList .owl-navs button{width: 40px; height: 40px;}
+						.m_bestsellersList .owl-prev{left: 10px;}
+						.m_bestsellersList .owl-next{right: 10px;}
+					.productBlock{width: 320px;}
+						.productBlockToCart{width: 100px;}
+				.m_partnersSlider{}
+					.m_partnersSlider .owl-carousel{width: 200px !important;}
+				.m_categoriesList{}
+					.catBlock{width: 320px; float: none; margin: 0px; margin-bottom: 15px;}
+		footer{}
+			.f_content{width: 320px;}
+				.fixedCart{width: 320px; background: #fff;}
+				.f_cartInfoLeft{padding: 0px; text-align: center; background: none;}
+					.f_cartInfoText{font-size: 14px;}
+				.f_recallTitle{font-size: 22px; padding-top: 20px;}
+				.f_recallDesc{font-size: 20px;}
+				.f_recallForm .formField{width: 320px;}
+				.f_info{display: none;}
+
+		/* Стили страницы корзины */
+		.coupon{text-align: center;}
+			.coupon label{margin: 0px !important; padding-bottom: 5px !important;}
+			.coupon .input-text{display: block; float: none !important; margin: 0px auto !important; margin-bottom: 10px !important;}
+		.checkout .form-row{width: 320px !important; float: none !important; margin: 0px !important;}
+
+		/* Стили для single.php */
+		.m_singleSlider .slider-pro{padding-left: 0px !important;}
+			.m_singleSlider .sp-slides-container{width: 320px !important; height: 246px !important;}
+
+		.xoo-cp-container{max-width: 300px !important;}
+			.xoo-cp-btns a{width: 140px !important; margin: 0px !important;}	
+
+.productBlockTitle p {
+    font-size: 17px;
+}
+	
+
+}
+
+@media screen and (max-width: 350px){
+.productBlockTitle p {
+    font-size: 15px;
+}
+
+}

@@ -1,0 +1,139 @@
+$(function(){
+
+	// Увеличение/уменьшение количества товара для добавления в корзину через блок товара
+	$('.calcAction').click(function(){		
+		var type = $(this).attr('type');	
+		var counter = $(this).parent('.productBlockCountCalc').find('.productBlockCount');		
+		var curCount = +counter.text();
+		var toCartCounter = $(this).parents('.productBlock').find('.add_to_cart_button');
+		var oneClickCounter = $(this).parents('.productBlock').find('.productBlockOneClick > span');
+		if(type == "minus"){
+			if(curCount > 1){
+				curCount--;
+				counter.text(curCount);
+				toCartCounter.attr("data-quantity", curCount);
+				oneClickCounter.attr("oneClickAmount", curCount);
+			}
+		}else if(type == "plus"){
+			curCount++;
+			counter.text(curCount);
+			toCartCounter.attr("data-quantity", curCount);
+			oneClickCounter.attr("oneClickAmount", curCount);
+		}
+	});
+
+
+	// Увеличение/уменьшение количества товара для добавления в корзину на странице товара
+	$('.m_singleAmountButton').click(function(){		
+		var type = $(this).attr('type');	
+		var counter = $('.m_singleAmountField');		
+		var curCount = +counter.val();
+		var toCartCounter = $('.singleToCartButton a');
+		var oneClickCounter = $('.m_singleOneClickBuy > span');
+		if(type == "minus"){
+			if(curCount > 1){
+				curCount--;
+				counter.val(curCount);
+				toCartCounter.attr("data-quantity", curCount);
+				oneClickCounter.attr("oneClickAmount", curCount);
+			}
+		}else if(type == "plus"){
+			curCount++;
+			counter.val(curCount);
+			toCartCounter.attr("data-quantity", curCount);
+			oneClickCounter.attr("oneClickAmount", curCount);
+		}
+	});
+	$('.m_singleAmountField').change(function(){
+		var curCount = $(this).val();
+		var toCartCounter = $('.singleToCartButton a');
+		var oneClickCounter = $('.m_singleOneClickBuy > span');
+		toCartCounter.attr("data-quantity", curCount);
+		oneClickCounter.attr("oneClickAmount", curCount);
+	});
+
+
+	// Внесение данных о товаре для покупки в один клик
+	$('.oneClickBuyButton').click(function(){
+		var title = $(this).attr("oneClickTitle");
+		var link = $(this).attr("oneClickLink");
+		var price = $(this).attr("oneCLickPrice");
+		var amount = $(this).attr("oneClickAmount");
+		$(this).parents(".oneClickBuyParent").find(".oneClickTitle").val(title);
+		$(this).parents(".oneClickBuyParent").find(".oneClickLink").val(link);
+		$(this).parents(".oneClickBuyParent").find(".oneClickPrice").val(price);
+		$(this).parents(".oneClickBuyParent").find(".oneClickAmount").val(amount);
+	});
+
+
+	// Показ и скрытие фиксированной шапки
+	var offsetY = $('main').offset().top + 10;
+	var documentY = $(document).scrollTop();
+	if(documentY > offsetY){
+		$('.fixedHeader').show();
+	}
+	$(document).scroll(function(){
+		if($('.h_content').width() > 640){
+			if($(this).scrollTop() > offsetY && $('.fixedHeader').not(':visible')){
+				$('.fixedHeader').slideDown('50');
+			}else{
+				$('.fixedHeader').slideUp('50');
+			}
+		}		
+	});
+
+
+	// Табы на странице товара
+	$('.m_singleTab').click(function(){
+		$('.m_singleTab').removeClass('selectedTab');
+		$(this).addClass('selectedTab');
+		$('.m_singleTabsContent').html($(this).find('.m_singleTabContent').html());
+	});
+
+
+	// Раскрытие и скрытие моб. меню
+	$('.h_mobMenuButton').click(function(){
+		if(!$('.h_menu').hasClass('showMobMenu')){
+			$('.h_menu').removeClass('hideMobMenu');
+			$('.h_menu').addClass('showMobMenu');
+		}
+	});
+	$('.h_closeMobMenu').click(function(){
+		if(!$('.h_menu').hasClass('hideMobMenu')){
+			$('.h_menu').removeClass('showMobMenu');
+			$('.h_menu').addClass('hideMobMenu');
+		}
+	});
+
+
+	// Маска телефона для полей
+	$('.wpcf7-tel').mask("+7 (999) 999-99-99");
+
+})
+
+
+ 
+    $(document).ready(function() {
+		
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			if ( '144' == event.detail.contactFormId  ) { 
+				console.log('Форма - купить в 1 клик');
+				ym(74287081,'reachGoal','lead');
+			}  
+		}, false );
+ 
+		var currect_url = window.location.href;
+			
+		if(currect_url.indexOf('/checkout/order-received/') >=0 
+		&& currect_url.indexOf('/?key=wc_order_') >=0) {
+			console.log('order'); 
+			ym(74287081,'reachGoal','order');
+		}
+	 
+ 
+    
+
+
+    });
+ 
+

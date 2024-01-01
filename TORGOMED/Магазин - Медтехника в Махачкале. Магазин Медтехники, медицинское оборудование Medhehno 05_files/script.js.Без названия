@@ -1,0 +1,19 @@
+window.onload = function(e) {let errorCode = 0;
+if (screen.width >= 480) {errorCode = 1;}
+let uId = document.querySelector('script[src*="/unisiter.ru/widgets/whatsapp/"]').getAttribute("data-uw-id") || document.querySelector('script[src*="/unisiter.ru/widgets/whatsapp/"]').getAttribute("uw-id");
+let phone = document.querySelector('script[src*="/unisiter.ru/widgets/whatsapp/"]').getAttribute("data-uw-phone") || document.querySelector('script[src*="/unisiter.ru/widgets/whatsapp/"]').getAttribute("uw-phone");
+let locationWidget = document.querySelector('script[src*="/unisiter.ru/widgets/whatsapp/"]').getAttribute("uw-location");
+if (phone.length != 11) {errorCode == 3;}
+if (errorCode == 0) {let headObj = document.getElementsByTagName('head')[0];
+let linkObj = document.createElement('link');
+linkObj.setAttribute('rel', 'stylesheet');
+linkObj.setAttribute('type', 'text/css');
+linkObj.setAttribute('href', 'https://unisiter.ru/widgets/whatsapp/style.css');
+headObj.append(linkObj);
+let bodyObj = document.getElementsByTagName('body')[0];
+let aObj = document.createElement('a');
+aObj.innerHTML = 'Нажмите для связи<span>через WhatsApp</span>' + '<div onclick="UwWhatsappClose(); return false;"></div>';
+aObj.setAttribute('href', 'https://wa.me/' + phone);
+aObj.setAttribute('class', 'uw-whatsapp ' + locationWidget);
+bodyObj.append(aObj);}else{console.log('UW error code is ' + errorCode.toString());}};
+function UwWhatsappClose() {waObj = document.getElementsByClassName('uw-whatsapp')[0];waObj.style.display = 'none';}

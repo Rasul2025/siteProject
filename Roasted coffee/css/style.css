@@ -1,0 +1,191 @@
+/*Обнуление*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+
+
+/*--------------------*/
+
+
+
+
+body {
+    background-color: #020204;
+    font-family: 'Jost', sans-serif;
+}
+
+.header {
+    border-bottom: 1px solid #32323D;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header__line {    
+    border-bottom: 1px solid #32323D;
+}
+
+.header__line-wrap {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__lnk {
+    display: flex;
+    gap: 10px;
+}
+
+.header__lnk a {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header__lnk a.active {
+    color: #C7A17A;
+}
+
+.header__phone {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header__wrap {
+    height: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__block {
+    width: 40%;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav__link {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: color .2s ease;
+}
+
+.nav__link:hover {
+    color: #C7A17A;
+}
+
+.nav__link.active {
+    color: #C7A17A;
+}
+
+.logo {}
+
+.logo img {
+    display: block;
+    height: 54px;
+}
+
+.header__action {
+    display: flex;
+    gap: 30px;
+}
+
+.header__link {
+    position: relative;
+}
+
+.header__link-event {
+    height: 6px;
+    width: 6px;
+    background-color: #C7A17A;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+}
+
+.header__block.right {
+    display: flex;
+    justify-content: flex-end;
+}
